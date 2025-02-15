@@ -43,6 +43,40 @@ export async function initRootUser(retry = 3): Promise<any> {
       }
       // init root team
       await createDefaultTeam({ userId: rootId, session });
+
+      // const filePath = path.join(process.cwd(), 'users.txt');
+      // console.log('filePath', filePath);
+
+      // async function loadUsersFromFile() {
+      //   const data = fs.readFileSync(filePath, 'utf-8');
+      //   return data
+      //     .split('\n')
+      //     .map((line) => line.trim())
+      //     .filter((line) => line) // 过滤空行
+      //     .map((line) => {
+      //       const [username, password] = line.split(','); // 假设用户名和密码用逗号分隔
+      //       return { username, password };
+      //     });
+      // }
+      // const users = await loadUsersFromFile();
+
+      // await mongoSessionRun(async (session) => {
+      //   for (const user of users) {
+      //     const hashedPassword = hashStr(user.password);
+      //     const newUser = await MongoUser.create(
+      //       [
+      //         {
+      //           username: user.username,
+      //           password: hashedPassword
+      //         }
+      //       ],
+      //       { session }
+      //     );
+
+      //     const userId = newUser[0]._id;
+      //     await createDefaultTeam({ userId, session });
+      //   }
+      // });
     });
 
     console.log(`root user init:`, {
