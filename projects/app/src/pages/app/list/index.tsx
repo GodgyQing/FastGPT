@@ -58,7 +58,6 @@ const MyApps = () => {
     setSearchKey
   } = useContextSelector(AppListContext, (v) => v);
   const { userInfo } = useUserStore();
-
   const [createAppType, setCreateAppType] = useState<CreateAppType>();
   const {
     isOpen: isOpenCreateHttpPlugin,

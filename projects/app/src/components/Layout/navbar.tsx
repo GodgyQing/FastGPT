@@ -51,27 +51,27 @@ const Navbar = ({ unread }: { unread: number }) => {
         link: `/chat?appId=${lastChatAppId}`,
         activeLink: ['/chat']
       },
-      {
-        label: t('common:navbar.Studio'),
-        icon: 'core/app/aiLight',
-        activeIcon: 'core/app/aiFill',
-        link: `/app/list`,
-        activeLink: ['/app/list', '/app/detail']
-      },
-      {
-        label: t('common:navbar.Datasets'),
-        icon: 'core/dataset/datasetLight',
-        activeIcon: 'core/dataset/datasetFill',
-        link: `/dataset/list`,
-        activeLink: ['/dataset/list', '/dataset/detail']
-      },
-      {
-        label: t('common:navbar.Toolkit'),
-        icon: 'phoneTabbar/tool',
-        activeIcon: 'phoneTabbar/toolFill',
-        link: `/toolkit`,
-        activeLink: ['/toolkit']
-      },
+      // {
+      //   label: t('common:navbar.Studio'),
+      //   icon: 'core/app/aiLight',
+      //   activeIcon: 'core/app/aiFill',
+      //   link: `/app/list`,
+      //   activeLink: ['/app/list', '/app/detail']
+      // },
+      // {
+      //   label: t('common:navbar.Datasets'),
+      //   icon: 'core/dataset/datasetLight',
+      //   activeIcon: 'core/dataset/datasetFill',
+      //   link: `/dataset/list`,
+      //   activeLink: ['/dataset/list', '/dataset/detail']
+      // },
+      // {
+      //   label: t('common:navbar.Toolkit'),
+      //   icon: 'phoneTabbar/tool',
+      //   activeIcon: 'phoneTabbar/toolFill',
+      //   link: `/toolkit`,
+      //   activeLink: ['/toolkit']
+      // },
       {
         label: t('common:navbar.Account'),
         icon: 'support/user/userLight',

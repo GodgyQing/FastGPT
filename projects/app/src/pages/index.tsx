@@ -30,7 +30,7 @@ const index = () => {
     } else {
       window.location.href = `https://isc-test.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=122801&redirect_uri=http://localhost:3000/?&state=" + this.randomString(32)`;
     }
-    router.push('/app/list');
+    router.push('/app/home');
   }, [router]);
   return <Loading></Loading>;
 };

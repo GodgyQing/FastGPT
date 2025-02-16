@@ -20,30 +20,30 @@ const NavbarPhone = ({ unread }: { unread: number }) => {
         activeLink: ['/chat'],
         unread: 0
       },
-      {
-        label: t('common:navbar.Studio'),
-        icon: 'core/app/aiLight',
-        activeIcon: 'core/app/aiFill',
-        link: `/app/list`,
-        activeLink: ['/app/list', '/app/detail'],
-        unread: 0
-      },
-      {
-        label: t('common:navbar.Datasets'),
-        icon: 'core/dataset/datasetLight',
-        activeIcon: 'core/dataset/datasetFill',
-        link: `/dataset/list`,
-        activeLink: ['/dataset/list', '/dataset/detail'],
-        unread: 0
-      },
-      {
-        label: t('common:navbar.Toolkit'),
-        icon: 'phoneTabbar/tool',
-        activeIcon: 'phoneTabbar/toolFill',
-        link: `/toolkit`,
-        activeLink: ['/toolkit'],
-        unread: 0
-      },
+      // {
+      //   label: t('common:navbar.Studio'),
+      //   icon: 'core/app/aiLight',
+      //   activeIcon: 'core/app/aiFill',
+      //   link: `/app/list`,
+      //   activeLink: ['/app/list', '/app/detail'],
+      //   unread: 0
+      // },
+      // {
+      //   label: t('common:navbar.Datasets'),
+      //   icon: 'core/dataset/datasetLight',
+      //   activeIcon: 'core/dataset/datasetFill',
+      //   link: `/dataset/list`,
+      //   activeLink: ['/dataset/list', '/dataset/detail'],
+      //   unread: 0
+      // },
+      // {
+      //   label: t('common:navbar.Toolkit'),
+      //   icon: 'phoneTabbar/tool',
+      //   activeIcon: 'phoneTabbar/toolFill',
+      //   link: `/toolkit`,
+      //   activeLink: ['/toolkit'],
+      //   unread: 0
+      // },
       {
         label: t('common:navbar.Account'),
         icon: 'support/user/userLight',

@@ -60,7 +60,7 @@ const ToolMenu = ({ history }: { history: ChatItemType[] }) => {
             // }
           ]
         },
-        ...(showRouteToAppDetail
+        ...(!showRouteToAppDetail
           ? [
               {
                 children: [

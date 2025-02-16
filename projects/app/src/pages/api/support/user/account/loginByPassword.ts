@@ -24,7 +24,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     },
     'status'
   );
-  if (!authCert) {
+
+  if (username != 'root' || !authCert) {
     return Promise.reject(UserErrEnum.account_psw_error);
   }
 
