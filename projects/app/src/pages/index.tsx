@@ -19,7 +19,9 @@ const index = () => {
   useEffect(() => {
     let iscToken = getQueryParams('#access_token');
     if (router.asPath.indexOf('access_token=') !== -1) {
-      isclogin(iscToken);
+      isclogin(iscToken).then((res) => {
+        router.push('/app/home');
+      });
       // postLogin({
       //   username: 'guoyuqing',
       //   password: '123456'
@@ -28,9 +30,10 @@ const index = () => {
       //   router.push('/app/list');
       // });
     } else {
-      window.location.href = `https://iscsso.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=9761295426&redirect_uri=http://10.88.121.83:3000/?&state=" + this.randomString(32)`;
+      window.location.href =
+        'https://iscsso.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=9761295426&redirect_uri=http://10.88.121.83:3000/?&state=cctc';
+      // window.location.href = "https://iscsso.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=9761295426&redirect_uri=http://localhost:3000/?&state=cctc";
     }
-    router.push('/app/home');
   }, [router]);
   return <Loading></Loading>;
 };
