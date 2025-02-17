@@ -97,3 +97,8 @@ export const isclogin = (assectToken: any) =>
   POST<ResLogin>('/support/user/account/isclogin', {
     assectToken
   });
+
+export const iscloginout = (iscUserId: any) =>
+  POST<ResLogin>('/support/user/account/iscloginout', {
+    iscUserId
+  });

@@ -9,7 +9,7 @@ import SideTabs from '@/components/SideTabs';
 import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
 import { useTranslation } from 'next-i18next';
 import { useSystem } from '@fastgpt/web/hooks/useSystem';
-
+import { iscloginout } from '@/web/support/user/api';
 export enum TabEnum {
   'info' = 'info',
   'promotion' = 'promotion',
@@ -131,7 +131,7 @@ const AccountContainer = ({
       if (tab === TabEnum.loginout) {
         openConfirm(() => {
           setUserInfo(null);
-          router.replace('/login');
+          //router.replace('/login');
         })();
       } else {
         router.replace('/account/' + tab);

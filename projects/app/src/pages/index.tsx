@@ -18,8 +18,11 @@ const index = () => {
   }
   useEffect(() => {
     let iscToken = getQueryParams('#access_token');
-    if (router.asPath.indexOf('access_token=') !== -1) {
-      isclogin(iscToken);
+    if (iscToken) {
+      isclogin(iscToken).then((res: any) => {
+        console.log(res, 999);
+        sessionStorage.setItem('info', res.data);
+      });
       // postLogin({
       //   username: 'guoyuqing',
       //   password: '123456'
