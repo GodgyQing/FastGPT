@@ -12,7 +12,7 @@ const randomString = (length: number) => {
 const Login = () => {
   useEffect(() => {
     const redirectUrl =
-      'https://isc-test.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=122801&redirect_uri=http://localhost:3000/?&state=' +
+      'https://iscsso.cctcltd.com:22022/isc_sso/oauth2.0/authorize?response_type=token&client_id=9761295426&redirect_uri=http://10.88.121.83:3000/?&state=' +
       randomString(32);
     window.location.href = redirectUrl;
   }, []);

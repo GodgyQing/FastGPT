@@ -6,6 +6,9 @@ import { createDefaultTeam } from '@fastgpt/service/support/user/team/controller
 import { exit } from 'process';
 import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
 
+import fs from 'fs';
+import path from 'path';
+
 /**
  * This function is equivalent to the entry to the service
  * connect MongoDB and init data
@@ -76,12 +79,10 @@ export async function initRootUser(retry = 3): Promise<any> {
       //     const userId = newUser[0]._id;
       //     await createDefaultTeam({ userId, session });
       //   }
-      // });
-    });
 
-    console.log(`root user init:`, {
-      username: 'root',
-      password: psw
+      // console.log(`root user init:`, {
+      //   username: 'root',
+      //   password: psw
     });
   } catch (error) {
     if (retry > 0) {
