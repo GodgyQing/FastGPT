@@ -13,7 +13,7 @@ import { UserErrEnum } from '@fastgpt/global/common/error/code/user';
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { assectToken } = req.body as { assectToken: string };
 
-  const apiUrl = `https://isc-test.cctcltd.com:22022/isc_sso/oauth2.0/profile?access_token=${assectToken}`;
+  const apiUrl = `https://iscsso.cctcltd.com:22022/isc_sso/oauth2.0/profile?access_token=${assectToken}`;
   const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
